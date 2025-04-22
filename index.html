@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Compras</title>
+    <title>Lista de Compras e Gastos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap"
+        rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <main>
-      <img src="./bag.png" alt="sacola de compras" />
-      <form>
-        <input
-          class="input-item"
-          id="input-item"
-          type="text"
-          placeholder="Digite o item que deseja adicionar"
-        />
-        <button class="button-item" id="adicionar-item" type="button">Salvar item</button>
-      </form>
+        <img src="./bag.png" alt="sacola de compras" />
+        <form id="form-adicionar-item">
+            <input
+                class="input-item"
+                id="input-item"
+                type="text"
+                placeholder="Digite o item"
+            />
+            <input
+                class="input-preco"
+                id="input-preco"
+                type="number"
+                placeholder="Preço"
+                step="0.01"
+            />
+            <input
+                class="input-quantidade"
+                id="input-quantidade"
+                type="number"
+                placeholder="Quantidade"
+                value="1"
+            />
+            <button class="button-item" id="adicionar-item" type="button">Adicionar item</button>
+        </form>
 
-      <div class="container-lista">
-        <h2>Lista de comprass</h2>
-        <hr />
+        <div class="container-lista">
+            <h2>Lista de Compras e Gastos</h2>
+            <hr />
 
-        <ul id="lista-de-compras"></ul>
-        <p class="mensagem-lista-vazia">Não ha nenhum item na lista no momento.</p>
-      </div>
+            <ul id="lista-de-compras"></ul>
+            <p class="mensagem-lista-vazia">Não há nenhum item na lista no momento.</p>
+            <div class="total-gastos">
+                <h3>Total: <span id="total-valor">R$ 0.00</span></h3>
+            </div>
+        </div>
     </main>
-    <script  src="index.js" type="module"></script>
-  </body>
+    <script src="index.js" type="module"></script>
+</body>
 </html>
